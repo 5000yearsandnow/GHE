@@ -397,8 +397,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 添加页面加载动画
+    // 图片预加载
+    function preloadImages() {
+        const images = [
+            'images/logo.png',
+            'images/hero-bg.jpg',
+            'images/about-bg.jpg',
+            'images/business-bg.jpg',
+            'images/news-bg.jpg',
+            'images/contact-bg.jpg',
+            'images/tech-icon.png',
+            'images/energy-icon.png',
+            'images/consulting-icon.png'
+        ];
+
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+
+    // 页面加载完成后预加载图片
     window.addEventListener('load', function() {
+        preloadImages();
         document.body.classList.add('loaded');
     });
 }); 
