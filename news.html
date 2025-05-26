@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHE - 最新消息</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="GHE Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-lang-key="home">首页</a></li>
+                    <li><a href="news.html" class="active" data-lang-key="news">企业新闻</a></li>
+                    <li><a href="about.html" data-lang-key="about">关于我们</a></li>
+                    <li><a href="business.html" data-lang-key="business">业务领域</a></li>
+                    <li><a href="contact.html" data-lang-key="contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="language">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="news-hero">
+            <div class="news-hero-content">
+                <h1 data-lang-key="latest_news">最新消息</h1>
+                <p data-lang-key="news_subtitle">了解GHE的最新动态和发展</p>
+            </div>
+        </section>
+
+        <section class="news-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" data-lang-key="all">全部</button>
+                    <button class="filter-btn" data-filter="news" data-lang-key="news">新闻</button>
+                    <button class="filter-btn" data-filter="announcement" data-lang-key="announcement">公告</button>
+                    <button class="filter-btn" data-filter="event" data-lang-key="event">活动</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-list">
+            <div class="container">
+                <div class="news-grid">
+                    <article class="news-card" data-category="news">
+                        <div class="news-image">
+                            <img src="images/news1.jpg" alt="技术创新">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">2024-03-15</div>
+                            <h3 data-lang-key="news1_title">GHE发布新一代人工智能解决方案</h3>
+                            <p data-lang-key="news1_desc">GHE今日宣布推出新一代人工智能解决方案，该方案将显著提升企业运营效率...</p>
+                            <a href="#" class="read-more" data-lang-key="read_more">阅读更多</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="announcement">
+                        <div class="news-image">
+                            <img src="images/news2.jpg" alt="季度财报">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">2024-03-10</div>
+                            <h3 data-lang-key="news2_title">2024年第一季度财报发布</h3>
+                            <p data-lang-key="news2_desc">GHE今日发布2024年第一季度财报，营收同比增长25%，净利润增长30%...</p>
+                            <a href="#" class="read-more" data-lang-key="read_more">阅读更多</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="event">
+                        <div class="news-image">
+                            <img src="images/news3.jpg" alt="行业峰会">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">2024-03-05</div>
+                            <h3 data-lang-key="news3_title">GHE参加2024全球科技创新峰会</h3>
+                            <p data-lang-key="news3_desc">GHE将作为主要赞助商参加2024全球科技创新峰会，展示最新技术成果...</p>
+                            <a href="#" class="read-more" data-lang-key="read_more">阅读更多</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">10</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-lang-key="contact">联系我们</h4>
+                <p>电话：+86 XXX XXXX XXXX</p>
+                <p>邮箱：info@ghe.com</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-lang-key="follow">关注我们</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" data-lang-key="wechat">微信</a>
+                    <a href="#" class="social-link" data-lang-key="weibo">微博</a>
+                    <a href="#" class="social-link" data-lang-key="linkedin">领英</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GHE. <span data-lang-key="rights">保留所有权利</span>。</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

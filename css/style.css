@@ -1,0 +1,1060 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #FFD700;
+    --accent-color: #00A0DC;
+    --text-color: #333333;
+    --light-bg: #FFFFFF;
+    --dark-bg: #001F3F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* 头部样式 */
+.main-header {
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent-color);
+}
+
+/* 英雄区域样式 */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/processed/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-bg);
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--light-bg);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* 特性卡片样式 */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--light-bg);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--light-bg);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 语言选择器样式 */
+.language-selector select {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* 关于我们页面样式 */
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/processed/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-bg);
+    margin-top: 80px;
+}
+
+.about-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.company-intro {
+    background-color: var(--light-bg);
+}
+
+.company-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.company-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.company-values {
+    background-color: #f5f5f5;
+}
+
+.company-values h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.company-history {
+    background-color: var(--light-bg);
+}
+
+.company-history h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item .year {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.timeline-item .content {
+    width: 45%;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .content {
+    margin-right: auto;
+}
+
+.timeline-item .content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 业务领域页面样式 */
+.business-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/processed/business-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-bg);
+    margin-top: 80px;
+}
+
+.business-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.business-hero-content p {
+    font-size: 1.5rem;
+}
+
+.business-overview {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.business-overview h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.business-overview p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.business-areas {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+}
+
+.business-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+}
+
+.business-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.business-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.business-features {
+    list-style: none;
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.business-features li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.case-studies {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.case-studies h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.case-study-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.case-study-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.case-study-content {
+    padding: 1.5rem;
+}
+
+.case-study-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.case-study-content p {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--primary-color);
+}
+
+/* 投资者关系页面样式 */
+.investor-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/investor-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-bg);
+    margin-top: 80px;
+}
+
+.investor-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.investor-hero-content p {
+    font-size: 1.5rem;
+}
+
+.stock-info {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.stock-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.stock-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stock-card {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stock-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.stock-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.stock-change {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.stock-change.positive {
+    color: #28a745;
+}
+
+.stock-change.negative {
+    color: #dc3545;
+}
+
+.stock-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.detail-item {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.detail-item .label {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.detail-item .value {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.financial-reports {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.financial-reports h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.report-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.report-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+}
+
+.report-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.report-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--light-bg);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.investor-calendar {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.investor-calendar h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.calendar-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.calendar-item .date {
+    min-width: 120px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.calendar-item .event {
+    flex: 1;
+}
+
+.calendar-item .event h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-investor {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.contact-investor h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--light-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* 新闻页面样式 */
+.news-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/processed/news-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-bg);
+    margin-top: 80px;
+}
+
+.news-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.news-hero-content p {
+    font-size: 1.5rem;
+}
+
+.news-filter {
+    background-color: var(--light-bg);
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+}
+
+.news-list {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.news-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.news-content p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    border-color: var(--primary-color);
+}
+
+.newsletter {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--light-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--primary-color);
+}
+
+/* 联系我们页面样式 */
+.contact-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/processed/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-bg);
+    margin-top: 80px;
+}
+
+.contact-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-hero-content p {
+    font-size: 1.5rem;
+}
+
+.contact-info {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-details h2,
+.contact-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.contact-form {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--light-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.map-section {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.map-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.map-container {
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+} 
