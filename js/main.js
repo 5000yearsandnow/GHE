@@ -2,10 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // 移动端菜单切换
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.querySelector('.main-nav');
+    const menuOverlay = document.querySelector('.menu-overlay');
     
     if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
             mainNav.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        // 点击导航链接时关闭菜单
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // 监听窗口大小变化
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
+                toggleMenu();
+            }
         });
     }
 
